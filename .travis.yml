@@ -3,5 +3,14 @@ node_js:
 - node
 notifications:
   slack: mylo-dash:PiBSWnqPLOGdQSt8W0SavSaZ
-script: 
+script:
 - npm run build
+deploy:
+  provider: s3
+  access_key_id: AKIAJ5GTQKY6CHJN6CWA
+  secret_access_key:
+    secure: am305TbrFMVCV6OHPN/k8vtRP4Fu0q8Bn2Dj/StrXFcdAvDOnQQboRsHlR/RrR4TLZHAl4KEzoxtQ8xOhTsaUGY2C0iT8Poav1xT/mjMnTAvmKrGwKb5Gz4VwGEwxiO2AAJ+QFp3HmLEB71nCPbJs1rfYKNPR+pgs413QoIiSeIPMbtFC7onEPILjr0TNlsgbaxDLYYkvhP3F1Pu2uonGZp1n3HJN+eWIcTUpfo8Kfkzj3z1qB4ODlXypxNE1TM3hsERDY6bkgQXYaHW8qhv3XeJptRkr/5YbQtWICY/GT9dVNr9S0zeBX4iZVfQ8qhBfr0TYAZ7qg8C7MzLF3iIB3oxJ/XLzfEzF6f4QKBK9PLkPdLyHGvDCHTJ9I5LZFVxBNvW7r+60C8L6s8v7uS0w6v31SnxKeZxcKWJggbK/9q5+WMg4DbjvEopqxrs3GW1Ok2/V/4zD9pgQ+acHw5PjxUz+9BmHJ+wUSxC6Fq2Mo/igGtqkqrhboqqYH9ey3FC/0WB+5NL5Vjj1jE91WygERcMb1fu9xBtc39UrXC0rK5JAzTEO5V3Y9IlcBD74x/Q9ykGBgE4gGXniy3h0s9nj0rBvC80f/HjeU6pY3DJ6ktaHjHZ8eAJy6bjUxNmc+zae2jBCaiuwzvCPalaX2bO8+q302LZ/fIgVEtjKQ2HSQM=
+  bucket: mylo-sdk
+  acl: public_read
+  on:
+    repo: theonlyjohnny/mylo-sdk
