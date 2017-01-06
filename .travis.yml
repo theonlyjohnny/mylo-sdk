@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+- node
+notifications:
+  slack: mylo-dash:PiBSWnqPLOGdQSt8W0SavSaZ
+script: 
+- npm run build
