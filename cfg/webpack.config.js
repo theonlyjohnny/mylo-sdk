@@ -11,7 +11,8 @@ const plugins = [
     },
     output: {
       comments: false
-    }
+    },
+    mangle: false
   })
 ]
 
