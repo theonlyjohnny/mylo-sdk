@@ -1,8 +1,8 @@
-class SDK {
+class Mylo {
   constructor() {}
   init() {
   	
   }
 }
 
-module.exports = SDK;
+module.exports = Mylo;
