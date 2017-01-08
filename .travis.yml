@@ -5,6 +5,10 @@ notifications:
   slack: mylo-dash:PiBSWnqPLOGdQSt8W0SavSaZ
 script:
 - npm run build
+cache:
+    bundler: true
+    directories:
+        - node_modules
 deploy:
   provider: s3
   region: us-west-2
